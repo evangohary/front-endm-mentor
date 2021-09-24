@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+
+:root {
+    --color-primary-light: hsl(225, 100%, 94%);
+    --color-primary-light-2: hsla(225, 100%, 94%, 0.568);
+    --color-primary-darker: hsl(245, 75%, 52%);
+
+    --color-neutral-v-pale:hsl(225, 100%, 98%);
+    --color-neutral-destature:  hsl(224, 23%, 55%);
+    --color-neutral-Dark: hsl(223, 47%, 23%); 
+
+
+}
+
+html {
+    margin: 0;
+    background-color: var(--color-primary-darker);
+background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 80 80' width='80' height='80'%3E%3Cg fill='%239C92AC' fill-opacity='0.4'%3E%3Cpath d='M0 0h80v80H0V0zm20 20v40h40V20H20zm20 35a15 15 0 1 1 0-30 15 15 0 0 1 0 30z' opacity='.5'%3E%3C/path%3E%3Cpath d='M15 15h50l-5 5H20v40l-5 5V15zm0 50h50V15L80 0v80H0l15-15zm32.07-32.07l3.54-3.54A15 15 0 0 1 29.4 50.6l3.53-3.53a10 10 0 1 0 14.14-14.14zM32.93 47.07a10 10 0 1 1 14.14-14.14L32.93 47.07z'%3E%3C/path%3E%3C/g%3E%3C/svg%3E");
+}
+
+body {
+    background-image: url(../images/pattern-background-desktop.svg);
+    background-repeat: no-repeat;
+    background-position: top;
+    height: 100vh;
+    background-color: var(--color-primary-light);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    //max-width: 1440px;
+    margin: 0 auto;
+}
+
+
+
+.container {
+
+    
+    height: 80vh;
+    width: 33%;
+    min-width: 475px;
+    max-width: 500px;
+    max-height: 800px;
+    border-radius: 6%;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+
+    background-color: var(--color-neutral-v-pale);
+
+    &__top {
+        align-self: stretch;
+        background-image: url(../images/illustration-hero.svg);
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 35%;
+        
+    }
+
+    &__bottom {
+        align-self: center;
+        height: 65%;
+        display: flex;
+        flex-direction: column;
+        font-family: 'Red Hat Display', sans-serif;
+        color: var(--color-neutral-Dark);
+
+        &--text {
+            margin-top: 9%;
+            height: 100%;
+            text-align: center;
+            
+            h1 {
+                font-weight: 900;
+                width: 70%;
+                margin: 0 auto;
+            }
+            p {
+                font-size: 1rem;
+                width: 70%;
+                margin: 6% auto;
+
+
+            }
+        
+
+        &--Plan {
+            background-color: var(--color-primary-light-2);
+            width: 80%;
+            margin: 0 auto;
+            flex-direction: row;
+            display: flex;
+            align-items: center;
+            height: 22%;
+            align-items: center;
+
+            img {
+                border-radius: 50%;
+                height: 42px;
+                width: 42px;
+                margin-left: 5%;
+                
+            }
+            &--mid {
+                flex: 0 0 40%;
+                margin-right: auto;
+                text-align: start;
+                display: flex;
+                flex-direction: column;
+                
+                margin-left: 4%;
+                p { margin: 0; }
+                h3 { margin-bottom: 4%; margin-top: 0; font-weight: 900;}
+                
+            }
+            a {
+                align-self: center;
+                margin-right: 4%;
+                font-weight: 700;
+            } a:hover {
+                //background-color: ;
+                text-decoration: none;
+            }
+        }
+
+        &--btn {
+            flex-direction: column;
+            
+            &-1 {
+                width: 80%;
+                background-color: var(--color-primary-darker);
+                color: #fff;
+                font-size: 1rem;
+                padding: 1rem;
+                border-radius: .7rem;
+                margin-top: 7%;
+                border: none;
+                font-weight: 700;
+                cursor: pointer;
+                
+            } &-1:hover {
+                background-color: #683eadf6;
+            }
+
+            &-2 {
+                background-color: transparent;
+                color: var(--color-neutral-Dark);
+                margin-top: 5%;
+                font-weight: 700;
+
+            } &-2:hover {
+                font-weight: 900;
+                background-color: transparent;
+            }
+        }
+        }
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    html {
+        font-size: 70%;
+    }
+    
+    .container {
+        min-width: 300px;
+        width: 80%;
+        height: 90vh;
+        overflow: hidden;
+    }
+}
